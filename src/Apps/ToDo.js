@@ -16,6 +16,7 @@ const ToDo = () => {
       ]
     );
     e.preventDefault(); //stops page refreshing on submit
+    setText(""); //wipe input field on submition
   };
 
   const removeItem = (id) => {
