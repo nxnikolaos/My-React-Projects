@@ -7,8 +7,20 @@ const ToDo = () => {
   const [entries, setEntries] = useState([]);
 
   const mySubmit = (e) => {
-    setEntries([...entries, { id: nextId++, text: text }]);
+    setEntries(
+      //replace the state
+      [
+        //with a new array
+        ...entries, //contains all the old items
+        { id: nextId++, text: text }, //new item at the end
+      ]
+    );
     e.preventDefault(); //stops page refreshing on submit
+  };
+
+  const removeItem = (id) => {
+    let newEntries = entries.filter((entry) => entry.id != id); //return entries that dont match the id
+    setEntries(newEntries);
   };
 
   return (
@@ -20,7 +32,10 @@ const ToDo = () => {
       </form>
       <ul>
         {entries.map((entry) => (
-          <li key={entry.id}>{entry.text}</li>
+          <li key={entry.id}>
+            {entry.text}
+            <button onClick={() => removeItem(entry.id)}>Remove</button>
+          </li>
         ))}
       </ul>
     </>
