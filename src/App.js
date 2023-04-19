@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Component from "./Apps/Counter";
+import Component from "./Apps/Carousel";
 
 function App() {
   return (
