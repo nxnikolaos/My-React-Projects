@@ -1,22 +1,28 @@
 import React, { useState, useEffect } from "react";
 
+let nextId = 0;
+
 const ToDo = () => {
   const [text, setText] = useState("");
+  const [entries, setEntries] = useState([]);
 
   const mySubmit = (e) => {
-    setText(document.getElementById("todo-entry").value);
-    console.log(document.getElementById("todo-entry").value);
-    e.preventDefault();
+    setEntries([...entries, { id: nextId++, text: text }]);
+    e.preventDefault(); //stops page refreshing on submit
   };
 
   return (
     <>
       <h1>ToDo List:</h1>
       <form id="form" className="nxn-form" onSubmit={mySubmit}>
-        <input type="text" id="todo-entry" name="todo-entry"></input>
+        <input value={text} onChange={(e) => setText(e.target.value)}></input>
         <input type="submit" value="Add"></input>
       </form>
-      <p id="entries">{text}</p>
+      <ul>
+        {entries.map((entry) => (
+          <li key={entry.id}>{entry.text}</li>
+        ))}
+      </ul>
     </>
   );
 };
