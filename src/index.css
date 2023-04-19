@@ -27,13 +27,12 @@ code {
   border-radius: 5px;
 }
 
-ul {
+ol {
   padding-top: 1.5rem;
   text-align: left;
 }
 
-ul li {
-  text-decoration: underline;
+ol li {
   margin-bottom: 1rem;
 }
 

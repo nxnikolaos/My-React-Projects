@@ -30,14 +30,14 @@ const ToDo = () => {
         <input value={text} onChange={(e) => setText(e.target.value)}></input>
         <input type="submit" value="Add"></input>
       </form>
-      <ul>
+      <ol>
         {entries.map((entry) => (
           <li key={entry.id}>
             {entry.text}
             <button onClick={() => removeItem(entry.id)}>Remove</button>
           </li>
         ))}
-      </ul>
+      </ol>
     </>
   );
 };
