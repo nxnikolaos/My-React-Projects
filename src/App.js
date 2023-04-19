@@ -1,11 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
-import ToDo from "./Apps/ToDo";
+import Component from "./Apps/Counter";
 
 function App() {
   return (
     <div className="App">
-      <ToDo></ToDo>
+      <Component></Component>
     </div>
   );
 }

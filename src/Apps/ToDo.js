@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+document.title = `ToDo list App`;
+
 let nextId = 0;
 
 const ToDo = () => {
