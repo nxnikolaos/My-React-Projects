@@ -19,7 +19,19 @@ code {
     monospace;
 }
 
+#root {
+  padding: 2rem;
+  min-width: 400px;
+  min-height: 400px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+}
+
 section {
+}
+
+button {
+  padding: 0.5rem 1rem;
 }
 
 .carousel-section img {
@@ -30,14 +42,6 @@ section {
 .carousel-section button {
   margin: 1rem 0;
   padding: 0.5rem 1rem;
-}
-
-#root {
-  padding: 2rem;
-  min-width: 400px;
-  min-height: 400px;
-  background-color: antiquewhite;
-  border-radius: 5px;
 }
 
 ol {

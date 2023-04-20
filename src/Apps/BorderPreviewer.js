@@ -13,47 +13,65 @@ const BorderPreviewer = () => {
         Top Left Radius
         <input
           value={topLRadius}
-          onChange={(e) => setTopLRadius(e.target.value)}
+          onChange={(e) => setTopLRadius(Number(e.target.value))}
           type="number"
           size={2}
           name="topLeftRadius"
-          //   defaultValue={5}
         ></input>
       </label>
       <label className="float-right">
         Top Right Radius
         <input
           value={topRRadius}
-          onChange={(e) => setTopRRadius(e.target.value)}
+          onChange={(e) => setTopRRadius(Number(e.target.value))}
           type="number"
           size={2}
           name="topRightRadius"
-          //   defaultValue={5}
         ></input>
       </label>
-      <div className="box"></div>
+      <div
+        className="box"
+        style={{
+          borderTopLeftRadius: topLRadius,
+          //   backgroundColor: "red",
+          borderTopRightRadius: topRRadius,
+          borderBottomLeftRadius: botLRadius,
+          borderBottomRightRadius: botRRadius,
+        }}
+      ></div>
       <label>
         Bottom Left Radius
         <input
           value={botLRadius}
-          onChange={(e) => setBotLRadius(e.target.value)}
+          onChange={(e) => setBotLRadius(Number(e.target.value))}
           type="number"
           size={2}
           name="bottomLeftRadius"
-          //   defaultValue={5}
         ></input>
       </label>
       <label className="float-right">
         Bottom Right Radius
         <input
           value={botRRadius}
-          onChange={(e) => setBotRRadius(e.target.value)}
+          onChange={(e) => setBotRRadius(Number(e.target.value))}
           type="number"
           size={2}
           name="bottomRightRadius"
-          //   defaultValue={5}
         ></input>
       </label>
+      <p style={{ textAlign: "left" }}>
+        .box{`{`}
+        <br></br>
+        width: 200px; <br></br>
+        height: 200px; <br></br>
+        margin: 2rem auto; <br></br>border: 3px solid black;<br></br>
+        background-color: white;<br></br>
+        border-top-left-radius: {topLRadius};<br></br>
+        border-top-right-radius: {topRRadius};<br></br>
+        border-bottom-left-radius: {botLRadius};<br></br>
+        border-bottom-right-radius: {botRRadius};<br></br>
+        {"}"}
+      </p>
     </>
   );
 };
