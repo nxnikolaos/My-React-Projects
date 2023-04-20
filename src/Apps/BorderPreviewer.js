@@ -8,7 +8,7 @@ const BorderPreviewer = () => {
 
   return (
     <>
-      <h1>This is a border previewer!</h1>
+      <h1>This is a border radius previewer!</h1>
       <label>
         Top Left Radius
         <input
