@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { RadiusButton } from "./RadiusButton";
 
 const BorderPreviewer = () => {
   const [topLRadius, setTopLRadius] = useState(5);
@@ -9,6 +10,7 @@ const BorderPreviewer = () => {
   return (
     <>
       <h1>This is a border radius previewer!</h1>
+      <RadiusButton position={"Top"} align={"Left"}></RadiusButton>
       <label>
         Top Left Radius
         <input
