@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const RadiusButton = ({ position, align }) => {
-  const [radius, setRadius] = useState(5);
+export const RadiusButton = ({ position, align, setValue, value }) => {
+  
+
+    const radiusChange = (e) =>{
+        setValue(Number(e.target.value));
+    }
 
   return (
     <>
       <label>
         {position} {align} Radius
         <input
-          value={radius}
-          onChange={(e) => setRadius(Number(e.target.value))}
+          value={value}
+          onChange={radiusChange}
           type="number"
           size={2}
           name="Radius"
