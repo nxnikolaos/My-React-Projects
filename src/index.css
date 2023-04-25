@@ -32,6 +32,7 @@ section {
 
 button {
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 .carousel-section img {
@@ -53,9 +54,9 @@ li {
   margin-bottom: 1rem;
 }
 
-li button {
+/* li button {
   float: right;
-}
+} */
 
 .nxn-form input {
   padding: 1rem;
@@ -105,4 +106,9 @@ li button {
 
 .text-align-left {
   text-align: left;
+}
+
+.clear-button {
+  background-color: transparent;
+  border: none;
 }

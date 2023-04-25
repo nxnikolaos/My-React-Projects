@@ -1,5 +1,6 @@
 export const people = [
   {
+    id: 1,
     name: "Nikos",
     street: "Zervou",
     city: "Irakleio",
@@ -9,6 +10,7 @@ export const people = [
     birthday: "6-5-1994",
   },
   {
+    id: 2,
     name: "Fenia",
     street: "Evans",
     city: "Irakleio",
@@ -18,6 +20,7 @@ export const people = [
     birthday: "2-2-1992",
   },
   {
+    id: 3,
     name: "Petros",
     street: "Archimidous",
     city: "Ialusos",
