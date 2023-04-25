@@ -10,9 +10,18 @@ const BorderPreviewer = () => {
   return (
     <>
       <h1>This is a border radius previewer!</h1>
-      <RadiusButton setValue={setTopLRadius} value={topLRadius} position={"Top"} align={"Left"}></RadiusButton>
-      <RadiusButton setValue={setTopRRadius} value={topRRadius} position={"Top"} align={"Right"}></RadiusButton>
-
+      <RadiusButton
+        setValue={setTopLRadius}
+        value={topLRadius}
+        position={"Top"}
+        align={"Left"}
+      ></RadiusButton>
+      <RadiusButton
+        setValue={setTopRRadius}
+        value={topRRadius}
+        position={"Top"}
+        align={"Right"}
+      ></RadiusButton>
       <div
         className="box"
         style={{
@@ -22,8 +31,18 @@ const BorderPreviewer = () => {
           borderBottomRightRadius: botRRadius,
         }}
       ></div>
-      <RadiusButton setValue={setBotLRadius} value={botLRadius} position={"Bottom"} align={"Left"}></RadiusButton>
-      <RadiusButton setValue={setBotRRadius} value={botRRadius} position={"Bottom"} align={"Right"}></RadiusButton>
+      <RadiusButton
+        setValue={setBotLRadius}
+        value={botLRadius}
+        position={"Bottom"}
+        align={"Left"}
+      ></RadiusButton>
+      <RadiusButton
+        setValue={setBotRRadius}
+        value={botRRadius}
+        position={"Bottom"}
+        align={"Right"}
+      ></RadiusButton>
 
       <p style={{ textAlign: "left" }}>
         .box{`{`}
