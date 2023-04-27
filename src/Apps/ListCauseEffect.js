@@ -1,9 +1,12 @@
-import React from "react";
-import { people } from "./Data/ListCauseEffectData";
+import React, { useState } from "react";
+import { data } from "./Data/ListCauseEffectData";
 
 const ListCauseEffect = () => {
+  const [people, setPeople] = useState(data);
+
   const showPerson = (id) => {
-    console.log(id);
+    let newPeople = data.filter((person) => person.id === id);
+    setPeople(newPeople);
   };
 
   return (
@@ -11,9 +14,9 @@ const ListCauseEffect = () => {
       <h1>Show Object Details</h1>
       <div className="flex">
         <section className="width-50 text-align-left">
-          Users :
+          Click a User :
           <ul>
-            {people.map((person) => {
+            {data.map((person) => {
               const { id, name } = person;
               return (
                 <li key={id}>
@@ -30,11 +33,18 @@ const ListCauseEffect = () => {
         </section>
         <section className="width-50 text-align-left">
           Result :
-          <ul>
-            <li>Etros</li>
-            <li>Nikos</li>
-            <li>Nikos</li>
-          </ul>
+          {people.map((person) => {
+            const { id, name, birthday, city } = person;
+            if (people.length === 1) {
+              return (
+                <ul key={id}>
+                  <li>{name}</li>
+                  <li>{birthday}</li>
+                  <li>{city}</li>
+                </ul>
+              );
+            }
+          })}
         </section>
       </div>
     </>
