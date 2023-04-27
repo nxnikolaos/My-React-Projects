@@ -32,15 +32,28 @@ const ListCauseEffect = () => {
           </ul>
         </section>
         <section className="width-50 text-align-left">
-          Result :
+          Information :
           {people.map((person) => {
-            const { id, name, birthday, city } = person;
+            const {
+              id,
+              name,
+              street,
+              city,
+              state,
+              country,
+              telephone,
+              birthday,
+            } = person;
             if (people.length === 1) {
               return (
-                <ul key={id}>
-                  <li>{name}</li>
-                  <li>{birthday}</li>
-                  <li>{city}</li>
+                <ul className="list-style-none" key={id}>
+                  <li>Name : {name}</li>
+                  <li>Birthday : {birthday}</li>
+                  <li>Street : {street}</li>
+                  <li>City : {city}</li>
+                  <li>State : {state}</li>
+                  <li>Country : {country}</li>
+                  <li>Telephone : {telephone}</li>
                 </ul>
               );
             }

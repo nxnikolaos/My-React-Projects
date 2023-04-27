@@ -112,3 +112,7 @@ li {
   background-color: transparent;
   border: none;
 }
+
+.list-style-none {
+  list-style: none;
+}
