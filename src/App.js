@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Component from "./Apps/ListCauseEffect";
+import Component from "./Apps/Notes";
 
 function App() {
   return (
