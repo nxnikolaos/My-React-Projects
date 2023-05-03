@@ -108,6 +108,10 @@ li {
   text-align: left;
 }
 
+.text-align-right {
+  text-align: right;
+}
+
 .clear-button {
   background-color: transparent;
   border: none;
@@ -115,4 +119,24 @@ li {
 
 .list-style-none {
   list-style: none;
+}
+
+.color-red {
+  color: rgba(235, 26, 26, 0.952);
+}
+
+.article-note {
+  border-radius: 5px 0px;
+  margin: 2rem 0;
+}
+
+.header {
+  background-color: aquamarine;
+  border-radius: 15px 0px 0px 0px;
+}
+
+.article-note p {
+  background-color: white;
+  margin: 0;
+  padding: 1em;
 }
