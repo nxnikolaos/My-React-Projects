@@ -5,17 +5,27 @@ let index = 0;
 const Notes = () => {
   const [text, setText] = useState("");
   const [entries, setEntries] = useState([]);
+  const [editing, setEditing] = useState(false);
+
+  let viewMode = {}; //object with styling information
+  let editMode = {};
+
+  if (editing) {
+    viewMode.display = "none"; //edit the display styling property to none
+  } else {
+    editMode.display = "none";
+  }
 
   const mySubmit = (e) => {
     //submition function
     setEntries([...entries, { id: index++, text: text }]);
-
     e.preventDefault(); //stops page refreshing on submit
     setText(""); //wipe input field on submition
   };
 
   const editItem = (id) => {
-    console.log("hi");
+    //editing function
+    setEditing(true);
   };
 
   const deleteItem = (id) => {
@@ -47,7 +57,10 @@ const Notes = () => {
               Delete
             </button>
           </section>
-          <p className="text-align-left">{entry.text}</p>
+          <p className="text-align-left" style={viewMode}>
+            {entry.text}
+          </p>
+          <input type="text" value={entry.text} style={editMode}></input>
         </article>
       ))}
     </>

@@ -130,6 +130,16 @@ li {
   margin: 2rem 0;
 }
 
+.article-note input {
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  outline: none;
+  border: 2px solid aquamarine;
+  font-size: 1rem;
+  border-top: none;
+}
+
 .header {
   background-color: aquamarine;
   border-radius: 15px 0px 0px 0px;
