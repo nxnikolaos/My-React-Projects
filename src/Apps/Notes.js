@@ -7,15 +7,6 @@ const Notes = () => {
   const [entries, setEntries] = useState([]);
   const [editing, setEditing] = useState(false);
 
-  let viewMode = {}; //object with styling information
-  let editMode = {};
-
-  if (editing) {
-    viewMode.display = "none"; //edit the display styling property to none
-  } else {
-    editMode.display = "none";
-  }
-
   const mySubmit = (e) => {
     //submition function
     setEntries([...entries, { id: index++, text: text }]);
@@ -23,7 +14,7 @@ const Notes = () => {
     setText(""); //wipe input field on submition
   };
 
-  const editItem = (id) => {
+  const editItem = () => {
     //editing function
     setEditing(true);
   };
@@ -32,7 +23,6 @@ const Notes = () => {
     //deletion function
     const newEntries = entries.filter((entry) => entry.id !== id);
     setEntries(newEntries);
-    console.log(newEntries);
   };
 
   return (
@@ -45,7 +35,7 @@ const Notes = () => {
       </form>
       <h3>Your Notes :</h3>
       {entries.map((entry) => (
-        <article className="article-note">
+        <article className="article-note" key={entry.id}>
           <section className="header text-align-right">
             <button className="clear-button" onClick={() => editItem(entry.id)}>
               Edit
@@ -57,10 +47,8 @@ const Notes = () => {
               Delete
             </button>
           </section>
-          <p className="text-align-left" style={viewMode}>
-            {entry.text}
-          </p>
-          <input type="text" value={entry.text} style={editMode}></input>
+          <p className="text-align-left">{entry.text}</p>
+          <input type="text" value={entry.text}></input>
         </article>
       ))}
     </>
