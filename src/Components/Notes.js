@@ -14,8 +14,9 @@ const Notes = () => {
     setText(""); //wipe input field on submition
   };
 
-  const editItem = () => {
+  const editItem = (id) => {
     //editing function
+    // const editedItem = entries.find((i) => i.id === id);
     setEditing(true);
   };
 
@@ -47,8 +48,15 @@ const Notes = () => {
               Delete
             </button>
           </section>
-          <p className="text-align-left">{entry.text}</p>
-          <input type="text" value={entry.text}></input>
+          {/* <p className="text-align-left">{entry.text}</p> */}
+          {/*Entry result */}
+          {editing ? (
+            <input type="text" value={entry.text}></input>
+          ) : (
+            <p className="text-align-left">{entry.text}</p>
+          )}
+          {/* <input type="text" value={entry.text}></input> */}
+          {/*Edit Mode */}
         </article>
       ))}
     </>
