@@ -1,6 +1,6 @@
 import React from "react";
 
-export const FlipButton = ({ position, value, setValue, lmao }) => {
+export const FlipButton = ({ position, value, setValue }) => {
   const flipFunction = () => {
     console.log(value);
     setValue(value + 180);
