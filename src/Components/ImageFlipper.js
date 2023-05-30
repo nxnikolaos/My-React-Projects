@@ -24,12 +24,12 @@ const ImageFlipper = () => {
       ></img>
       <section className="inline-navigation">
         <FlipButton
-          position={"Vertical"}
+          position={"Horizontal"}
           value={degreesX}
           setValue={setDegreesX}
         ></FlipButton>
         <FlipButton
-          position={"Horizontal"}
+          position={"Vertical"}
           value={degreesY}
           setValue={setDegreesY}
         ></FlipButton>

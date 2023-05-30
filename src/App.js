@@ -1,5 +1,5 @@
 import "./App.css";
-import Component from "./Components/Carousel"; //change this to any js component file to load
+import Component from "./Components/ImageFlipper"; //change this to any js component file to load
 
 function App() {
   return (
