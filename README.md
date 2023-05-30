@@ -1,10 +1,8 @@
-## This is the development enviroment/branch
+# Getting Started with Create React App
 
-<br>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Projects
-
-<br>
 
 ImageFlipper : flip an image on the horizontal or vertical axis.<br>
 BorderPreviewer : change inpurt values for a live preview of a section's border radius.<br>
