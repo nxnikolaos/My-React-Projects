@@ -7,6 +7,7 @@ const ImageFlipper = () => {
   const [degreesY, setDegreesY] = useState(0);
 
   const lmao = degreesY + "deg";
+  const rotation = `rotateX(` + degreesX + `deg) rotateY(` + degreesY + `deg)`;
 
   return (
     <>
@@ -18,7 +19,8 @@ const ImageFlipper = () => {
         height={250}
         alt="wow"
         style={{
-          transform: `rotateX(${degreesX}deg) rotateY(${degreesY}deg)`,
+          // transform: `rotateX(${degreesX}deg) rotateY(${degreesY}deg)`,
+          transform: rotation,
           backgroundColor: `red`,
         }}
       ></img>
